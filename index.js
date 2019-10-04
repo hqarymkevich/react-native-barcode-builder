@@ -65,7 +65,7 @@ export default class Barcode extends PureComponent {
   update() {
     const encoder = barcodes[this.props.format];
     const encoded = this.encode(this.props.value, encoder, this.props);
-
+    console.log(encoded);
     if (encoded) {
       this.state.bars = this.drawSvgBarCode(encoded, this.props);
       this.state.barCodeWidth = encoded.data.length * this.props.width;
@@ -156,6 +156,7 @@ export default class Barcode extends PureComponent {
     //  text: 'xxxxx',
     //  data: '110100100001....'
     // }
+    console.log(encoder);
     var encoded = encoder.encode();
 
     return encoded;
