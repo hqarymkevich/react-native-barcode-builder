@@ -1,10 +1,9 @@
 import React, { PureComponent } from 'react';
-import { View, StyleSheet, ART, Text, Dimensions } from 'react-native';
+import { View, StyleSheet, Text, Dimensions } from 'react-native';
+import { Surface, Shape } from '@react-native-community/art';
 import PropTypes from 'prop-types';
 
 import barcodes from 'jsbarcode/src/barcodes';
-
-const { Surface, Shape } = ART;
 
 function getRatio(barWidth) {
   const windowWidth = Dimensions.get('screen').width;
